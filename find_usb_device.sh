@@ -1,7 +1,8 @@
 cd /sys/bus/usb/devices
 sysdir='/sys/bus/usb/devices'
 
-file=$(grep  "10c4/ea60"  * -r)
+#10c4/ea60
+file=$(grep $1 * -r)
 
 index=0
 for i in $(echo $file | busybox awk '{print $1,$2}')
